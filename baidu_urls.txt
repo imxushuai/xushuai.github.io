@@ -1,0 +1,15 @@
+http://www.xushuai.fun/2019/02/19/乐优商城笔记三：规格与商品模块/
+http://www.xushuai.fun/2018/12/25/乐友商城笔记二：分类与品牌模块/
+http://www.xushuai.fun/2018/12/22/FastDFS安装/
+http://www.xushuai.fun/2018/12/22/FastDFS简介/
+http://www.xushuai.fun/2018/12/17/乐优商城笔记一：项目搭建/
+http://www.xushuai.fun/2018/12/13/Navicat-Premium-12破解/
+http://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/
+http://www.xushuai.fun/2018/12/03/Spring-Cloud-Hystrix熔断器入门/
+http://www.xushuai.fun/2018/12/03/Spring-Cloud服务调用与负载均衡组件/
+http://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/
+http://www.xushuai.fun/2018/12/02/Spring-Cloud简述/
+http://www.xushuai.fun/2018/11/28/Spring-Boot自动配置原理/
+http://www.xushuai.fun/2018/11/27/配置Nginx反向代理/
+http://www.xushuai.fun/2018/11/27/Ngxin安装/
+http://www.xushuai.fun/2018/11/25/使用hexo搭建个人博客/
