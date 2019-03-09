@@ -100,12 +100,12 @@
 <meta name="keywords" content="nginx,服务器代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ngxin安装">
-<meta property="og:url" content="http://www.xushuai.fun/2018/11/27/Ngxin安装/index.html">
+<meta property="og:url" content="https://www.xushuai.fun/2018/11/27/Ngxin安装/index.html">
 <meta property="og:site_name" content="B - Blog">
 <meta property="og:description" content="本文介绍在centos环境下安装nginx">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006ifTg0gy1fxq195rirbj314k0kat8k.jpg">
-<meta property="og:updated_time" content="2018-11-30T07:56:15.842Z">
+<meta property="og:updated_time" content="2019-03-04T10:33:18.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ngxin安装">
 <meta name="twitter:description" content="本文介绍在centos环境下安装nginx">
@@ -139,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="http://www.xushuai.fun/2018/11/27/Ngxin安装/">
+  <link rel="canonical" href="https://www.xushuai.fun/2018/11/27/Ngxin安装/">
 
 
 
@@ -313,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.xushuai.fun/2018/11/27/Ngxin安装/">
+    <link itemprop="mainEntityOfPage" href="https://www.xushuai.fun/2018/11/27/Ngxin安装/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Baker">
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  606 字
+                  610 字
                 </span>
               
 
@@ -439,7 +439,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://ws1.sinaimg.cn/large/006ifTg0gy1fxq195rirbj314k0kat8k.jpg" rel="gallery_cjscxtrbi00085nt2e8vqhdms" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://ws1.sinaimg.cn/large/006ifTg0gy1fxq195rirbj314k0kat8k.jpg" rel="gallery_cjt19v0ix0000z5t2jtoc60u7" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006ifTg0gy1fxq195rirbj314k0kat8k.jpg" itemprop="contentUrl">
               </a>
             
@@ -461,18 +461,18 @@
 </blockquote>
 <ol>
 <li>下载nginx压缩包并上传至centos系统</li>
-<li>安装nginx需要的第三方库<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># PCRE：PCRE(Perl Compatible Regular Expressions)是一个Perl库，包括 perl 兼容的正则表达式库。nginx的http模块使用pcre来解析正则表达式，所以需要在linux上安装pcre库。</span></span></span><br><span class="line">yum install -y pcre pcre-devel</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># zlib：zlib库提供了很多种压缩和解压缩的方式，nginx使用zlib对http包的内容进行gzip，所以需要在linux上安装zlib库。</span></span></span><br><span class="line">yum install -y zlib zlib-devel</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># openssl：OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及SSL协议，并提供丰富的应用程序供测试或其它目的使用。</span></span></span><br><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
+<li>安装nginx需要的第三方库<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span># PCRE：PCRE(Perl Compatible Regular Expressions)是一个Perl库，包括 perl 兼容的正则表达式库。nginx的http模块使用pcre来解析正则表达式，所以需要在linux上安装pcre库。</span><br><span class="line">yum install -y pcre pcre-devel</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># zlib：zlib库提供了很多种压缩和解压缩的方式，nginx使用zlib对http包的内容进行gzip，所以需要在linux上安装zlib库。</span><br><span class="line">yum install -y zlib zlib-devel</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># openssl：OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及SSL协议，并提供丰富的应用程序供测试或其它目的使用。</span><br><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
 <li><p>解压nginx压缩包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 该压缩包路径为当前目录</span></span></span><br><span class="line">tar -zxvf nginx-1.8.0.tar.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span># 该压缩包路径为当前目录</span><br><span class="line">tar -zxvf nginx-1.8.0.tar.gz</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用nginx主目录中的configure命令生成makefile文件（将下面的命令一次性全部复制并执行）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 进入nginx目录(版本号以你下载的版本号为准，请注意修改)</span></span></span><br><span class="line">cd nginx-1.8.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 创建nginx临时目录</span></span></span><br><span class="line">mkdir -p /var/temp/nginx</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 复制下方全部，执行</span></span></span><br><span class="line">./configure \</span><br><span class="line">--prefix=/usr/local/nginx \</span><br><span class="line">--pid-path=/var/run/nginx/nginx.pid \</span><br><span class="line">--lock-path=/var/lock/nginx.lock \</span><br><span class="line">--error-log-path=/var/log/nginx/error.log \</span><br><span class="line">--http-log-path=/var/log/nginx/access.log \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--http-client-body-temp-path=/var/temp/nginx/client \</span><br><span class="line">--http-proxy-temp-path=/var/temp/nginx/proxy \</span><br><span class="line">--http-fastcgi-temp-path=/var/temp/nginx/fastcgi \</span><br><span class="line">--http-uwsgi-temp-path=/var/temp/nginx/uwsgi \</span><br><span class="line">--http-scgi-temp-path=/var/temp/nginx/scgi</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span># 进入nginx目录(版本号以你下载的版本号为准，请注意修改)</span><br><span class="line">cd nginx-1.8.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># 创建nginx临时目录</span><br><span class="line">mkdir -p /var/temp/nginx</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># 复制下方全部，执行</span><br><span class="line">./configure \</span><br><span class="line">--prefix=/usr/local/nginx \</span><br><span class="line">--pid-path=/var/run/nginx/nginx.pid \</span><br><span class="line">--lock-path=/var/lock/nginx.lock \</span><br><span class="line">--error-log-path=/var/log/nginx/error.log \</span><br><span class="line">--http-log-path=/var/log/nginx/access.log \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--http-client-body-temp-path=/var/temp/nginx/client \</span><br><span class="line">--http-proxy-temp-path=/var/temp/nginx/proxy \</span><br><span class="line">--http-fastcgi-temp-path=/var/temp/nginx/fastcgi \</span><br><span class="line">--http-uwsgi-temp-path=/var/temp/nginx/uwsgi \</span><br><span class="line">--http-scgi-temp-path=/var/temp/nginx/scgi \</span><br><span class="line">--with-http_stub_status_module --with-http_ssl_module</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>执行生成的Makefile文件<br><img src="https://ws1.sinaimg.cn/large/006ifTg0gy1fxmray6fy8j30q402nglr.jpg" alt=""></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 编译Makefile文件</span></span></span><br><span class="line">make</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 执行安装</span></span></span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span># 编译Makefile文件</span><br><span class="line">make</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># 执行安装</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>进入<code>/usr/local/</code>查看是否安装成功</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br></pre></td></tr></table></figure>
@@ -481,7 +481,7 @@
 <p><img src="https://ws1.sinaimg.cn/large/006ifTg0gy1fxmrbpo0pmj30um02gdfw.jpg" alt=""></p>
 <ol start="5">
 <li><p>启动 nginx</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 启动nginx（当前目录为：/usr/local）</span></span></span><br><span class="line">nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span># 启动nginx（当前目录为：/usr/local）</span><br><span class="line">nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看是否成功启动</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux|grep nginx</span><br></pre></td></tr></table></figure>
@@ -497,7 +497,7 @@
 <ul>
 <li>停止命令:  </li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 两个命令都可以完成停止操作</span></span></span><br><span class="line">./nginx -s stop   </span><br><span class="line">./nginx -s quit   //建议使用这个命令</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span># 两个命令都可以完成停止操作</span><br><span class="line">./nginx -s stop   </span><br><span class="line">./nginx -s quit   //建议使用这个命令</span><br></pre></td></tr></table></figure>
 <ul>
 <li>重启</li>
 </ul>
@@ -555,7 +555,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.xushuai.fun/2018/11/27/Ngxin安装/" title="Ngxin安装">http://www.xushuai.fun/2018/11/27/Ngxin安装/</a>
+    <a href="https://www.xushuai.fun/2018/11/27/Ngxin安装/" title="Ngxin安装">https://www.xushuai.fun/2018/11/27/Ngxin安装/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -1300,6 +1300,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>;
 <script>
-$("body").backstretch("http://images.xushuai.fun/background.jpg");
+$("body").backstretch("https://images.xushuai.fun/background.jpg");
 </script>
 <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

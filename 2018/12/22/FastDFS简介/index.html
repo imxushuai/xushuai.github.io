@@ -100,16 +100,16 @@
 <meta name="keywords" content="分布式文件系统,FastDFS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FastDFS简介">
-<meta property="og:url" content="http://www.xushuai.fun/2018/12/22/FastDFS简介/index.html">
+<meta property="og:url" content="https://www.xushuai.fun/2018/12/22/FastDFS简介/index.html">
 <meta property="og:site_name" content="B - Blog">
 <meta property="og:description" content="什么是FastDFS？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://images.xushuai.fun/18-12-22/39289704.jpg">
-<meta property="og:updated_time" content="2019-01-17T09:28:53.629Z">
+<meta property="og:image" content="https://images.xushuai.fun/18-12-22/39289704.jpg">
+<meta property="og:updated_time" content="2019-03-09T11:46:29.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FastDFS简介">
 <meta name="twitter:description" content="什么是FastDFS？">
-<meta name="twitter:image" content="http://images.xushuai.fun/18-12-22/39289704.jpg">
+<meta name="twitter:image" content="https://images.xushuai.fun/18-12-22/39289704.jpg">
 
 
 
@@ -139,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="http://www.xushuai.fun/2018/12/22/FastDFS简介/">
+  <link rel="canonical" href="https://www.xushuai.fun/2018/12/22/FastDFS简介/">
 
 
 
@@ -313,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.xushuai.fun/2018/12/22/FastDFS简介/">
+    <link itemprop="mainEntityOfPage" href="https://www.xushuai.fun/2018/12/22/FastDFS简介/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Baker">
@@ -439,8 +439,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://images.xushuai.fun/18-12-22/39289704.jpg" rel="gallery_cjscxtraj00025nt2kg0rkyrj" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://images.xushuai.fun/18-12-22/39289704.jpg" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="https://images.xushuai.fun/18-12-22/39289704.jpg" rel="gallery_cjt19v0jo0004z5t23580bggq" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://images.xushuai.fun/18-12-22/39289704.jpg" itemprop="contentUrl">
               </a>
             
           
@@ -475,7 +475,7 @@
 <p>跟踪器主要做调度工作，在访问上起负载均衡的作用。跟踪器和存储节点都可以由一台或多台服务器构成。跟踪器和存储节点中的服务器均可以随时增加或下线而不会影响线上服务。其中跟踪器中的所有服务器都是对等的，可以根据服务器的压力情况随时增加或减少。</p>
 </blockquote>
 <h2 id="FastDFS的结构"><a href="#FastDFS的结构" class="headerlink" title="FastDFS的结构"></a>FastDFS的结构</h2><p>结构图：</p>
-<p><img src="http://images.xushuai.fun/18-12-21/16689581.jpg" alt=""></p>
+<p><img src="https://images.xushuai.fun/18-12-21/16689581.jpg" alt=""></p>
 <p>可以在图中看到上文提到的两个角色</p>
 <ul>
 <li>Tracker ：跟踪服务器，主要负责调度storage节点与client通信，在访问上起负载均衡的作用，和记录storage节点的运行状态，是连接client和storage节点的枢纽</li>
@@ -487,14 +487,14 @@
 <li>Tracker Cluster：跟踪服务器的集群，有一组Tracker Server（跟踪服务器）组成。</li>
 <li>Storage Cluster ：存储集群，有多个Group组成。</li>
 </ul>
-<h2 id="FastDFS上传下载流程图"><a href="#FastDFS上传下载流程图" class="headerlink" title="FastDFS上传下载流程图"></a>FastDFS上传下载流程图</h2><h3 id="上传流程"><a href="#上传流程" class="headerlink" title="上传流程"></a>上传流程</h3><p><img src="http://images.xushuai.fun/18-12-21/74880626.jpg" alt=""></p>
+<h2 id="FastDFS上传下载流程图"><a href="#FastDFS上传下载流程图" class="headerlink" title="FastDFS上传下载流程图"></a>FastDFS上传下载流程图</h2><h3 id="上传流程"><a href="#上传流程" class="headerlink" title="上传流程"></a>上传流程</h3><p><img src="https://images.xushuai.fun/18-12-21/74880626.jpg" alt=""></p>
 <ol>
 <li>Client通过Tracker server查找可用的Storage server。</li>
 <li>Tracker server向Client返回一台可用的Storage server的IP地址和端口号。</li>
 <li>Client直接通过Tracker server返回的IP地址和端口与其中一台Storage server建立连接并进行文件上传。</li>
 <li>上传完成，Storage server返回Client一个文件ID，文件上传结束。</li>
 </ol>
-<h3 id="下载流程"><a href="#下载流程" class="headerlink" title="下载流程"></a>下载流程</h3><p><img src="http://images.xushuai.fun/18-12-21/67873037.jpg" alt=""></p>
+<h3 id="下载流程"><a href="#下载流程" class="headerlink" title="下载流程"></a>下载流程</h3><p><img src="https://images.xushuai.fun/18-12-21/67873037.jpg" alt=""></p>
 <ol>
 <li>Client通过Tracker server查找要下载文件所在的的Storage server。</li>
 <li>Tracker server向Client返回包含指定文件的某个Storage server的IP地址和端口号。</li>
@@ -554,7 +554,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.xushuai.fun/2018/12/22/FastDFS简介/" title="FastDFS简介">http://www.xushuai.fun/2018/12/22/FastDFS简介/</a>
+    <a href="https://www.xushuai.fun/2018/12/22/FastDFS简介/" title="FastDFS简介">https://www.xushuai.fun/2018/12/22/FastDFS简介/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -1301,6 +1301,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>;
 <script>
-$("body").backstretch("http://images.xushuai.fun/background.jpg");
+$("body").backstretch("https://images.xushuai.fun/background.jpg");
 </script>
 <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

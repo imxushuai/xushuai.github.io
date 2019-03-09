@@ -100,12 +100,12 @@
 <meta name="keywords" content="Spring Cloud,Zuul">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Cloud Zuul网关">
-<meta property="og:url" content="http://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/index.html">
+<meta property="og:url" content="https://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/index.html">
 <meta property="og:site_name" content="B - Blog">
 <meta property="og:description" content="微服务的门卫大爷Zuul">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006ifTg0gy1fxspi88u31j32a40nygmk.jpg">
-<meta property="og:updated_time" content="2018-12-06T15:47:55.006Z">
+<meta property="og:updated_time" content="2019-03-09T11:48:21.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Cloud Zuul网关">
 <meta name="twitter:description" content="微服务的门卫大爷Zuul">
@@ -139,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="http://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/">
+  <link rel="canonical" href="https://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/">
 
 
 
@@ -313,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/">
+    <link itemprop="mainEntityOfPage" href="https://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Baker">
@@ -450,7 +450,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://ws1.sinaimg.cn/large/006ifTg0gy1fxspi88u31j32a40nygmk.jpg" rel="gallery_cjscxtrc5000h5nt293n32c8z" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://ws1.sinaimg.cn/large/006ifTg0gy1fxspi88u31j32a40nygmk.jpg" rel="gallery_cjt19v0kb000bz5t2y9xa0ujk" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006ifTg0gy1fxspi88u31j32a40nygmk.jpg" itemprop="contentUrl">
               </a>
             
@@ -501,7 +501,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xushuai;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.client.SpringCloudApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.zuul.EnableZuulProxy;</span><br><span class="line"></span><br><span class="line"><span class="meta">@EnableZuulProxy</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GatewayApplication</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(GatewayApplication.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在<code>application.yml</code>中配置路由规则</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">zuul:</span></span><br><span class="line"><span class="attr">  routes:</span></span><br><span class="line">    <span class="comment"># id：这个 id 可以随意命名</span></span><br><span class="line"><span class="attr">    id:</span></span><br><span class="line">      <span class="comment"># 配置路径，这里的路径为服务匹配路径</span></span><br><span class="line"><span class="attr">      path:</span> <span class="string">/provider/**</span></span><br><span class="line">      <span class="comment"># 配置转发到的url，服务提供者的地址</span></span><br><span class="line">      <span class="string">url</span> <span class="string">:</span> <span class="attr">http://localhost:8081</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">zuul:</span></span><br><span class="line"><span class="attr">  routes:</span></span><br><span class="line">    <span class="comment"># id：这个 id 可以随意命名</span></span><br><span class="line"><span class="attr">    id:</span></span><br><span class="line">      <span class="comment"># 配置路径，这里的路径为服务匹配路径</span></span><br><span class="line"><span class="attr">      path:</span> <span class="string">/provider/**</span></span><br><span class="line">      <span class="comment"># 配置转发到的url，服务提供者的地址</span></span><br><span class="line">      <span class="string">url</span> <span class="string">:</span> <span class="attr">https://localhost:8081</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动测试</p>
 <p><img src="https://ws1.sinaimg.cn/large/006ifTg0gy1fxw9y2zhyoj30eq03w0st.jpg" alt=""></p>
@@ -524,7 +524,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改<code>application.yml</code>配置</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="attr">zuul:</span></span><br><span class="line"><span class="attr">  routes:</span></span><br><span class="line">    <span class="comment"># id：这个 id 可以随意命名</span></span><br><span class="line"><span class="attr">    id:</span></span><br><span class="line">      <span class="comment"># 配置路径，这里的路径为服务匹配路径</span></span><br><span class="line"><span class="attr">      path:</span> <span class="string">/provider/**</span></span><br><span class="line">      <span class="comment"># 配置转发到的url，服务提供者的地址</span></span><br><span class="line">      <span class="string">url</span> <span class="string">:</span> <span class="attr">http://127.0.0.1:8081</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="attr">zuul:</span></span><br><span class="line"><span class="attr">  routes:</span></span><br><span class="line">    <span class="comment"># id：这个 id 可以随意命名</span></span><br><span class="line"><span class="attr">    id:</span></span><br><span class="line">      <span class="comment"># 配置路径，这里的路径为服务匹配路径</span></span><br><span class="line"><span class="attr">      path:</span> <span class="string">/provider/**</span></span><br><span class="line">      <span class="comment"># 配置转发到的url，服务提供者的地址</span></span><br><span class="line">      <span class="string">url</span> <span class="string">:</span> <span class="attr">https://127.0.0.1:8081</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在启动类上加入<code>@EnableDiscoveryClient</code>注解</p>
 <p><img src="https://ws1.sinaimg.cn/large/006ifTg0gy1fxwa8f8qdpj30gx050q33.jpg" alt=""></p>
@@ -579,7 +579,7 @@
 <li><p><code>run</code>：过滤器的具体逻辑定义在这个方法内部，通过<code>RequestContext</code>定义当前请求是否拦截。</p>
 </li>
 </ol>
-<h3 id="过滤器的声明周期"><a href="#过滤器的声明周期" class="headerlink" title="过滤器的声明周期"></a>过滤器的声明周期</h3><p><img src="http://pjay3er0j.bkt.clouddn.com/18-12-6/64872783.jpg" alt=""></p>
+<h3 id="过滤器的声明周期"><a href="#过滤器的声明周期" class="headerlink" title="过滤器的声明周期"></a>过滤器的声明周期</h3><p><img src="https://images.xushuai.fun/18-12-6/64872783.jpg" alt=""></p>
 <ol>
 <li><p>请求正常返回</p>
 <blockquote>
@@ -594,7 +594,7 @@
 </ul>
 </li>
 <li><p>Zuul 内置过滤器列表</p>
-<p><img src="http://pjay3er0j.bkt.clouddn.com/18-12-6/950130.jpg" alt=""></p>
+<p><img src="https://images.xushuai.fun/18-12-6/950130.jpg" alt=""></p>
 </li>
 </ol>
 <p>   内置Filter相关参数</p>
@@ -675,7 +675,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xushuai.filter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.netflix.zuul.ZuulFilter;</span><br><span class="line"><span class="keyword">import</span> com.netflix.zuul.context.RequestContext;</span><br><span class="line"><span class="keyword">import</span> com.netflix.zuul.exception.ZuulException;</span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.HttpStatus;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自定义过滤器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyCustomerFilter</span> <span class="keyword">extends</span> <span class="title">ZuulFilter</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">filterType</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 定义当前过滤器类型为：前置过滤器</span></span><br><span class="line">        <span class="keyword">return</span> FilterConstants.PRE_TYPE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">filterOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 定义当前过滤器执行顺序</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">shouldFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 定义当前过滤器生效</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 过滤器逻辑定义在这个方法内</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">run</span><span class="params">()</span> <span class="keyword">throws</span> ZuulException </span>&#123;</span><br><span class="line">        log.info(<span class="string">"My CustomerFilter run....."</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取请求上下文</span></span><br><span class="line">        RequestContext currentContext = RequestContext.getCurrentContext();</span><br><span class="line">        <span class="comment">// true为放行，false为拦截</span></span><br><span class="line"><span class="comment">//        currentContext.setSendZuulResponse(true);</span></span><br><span class="line">        currentContext.setSendZuulResponse(<span class="keyword">false</span>);</span><br><span class="line">        <span class="comment">// 设置响应码</span></span><br><span class="line">        currentContext.setResponseStatusCode(HttpStatus.BAD_REQUEST.value());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回值任意</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>运行测试</p>
-<p><img src="http://pjay3er0j.bkt.clouddn.com/18-12-6/12448675.jpg" alt=""></p>
+<p><img src="https://images.xushuai.fun/18-12-6/12448675.jpg" alt=""></p>
 </li>
 </ol>
 <h3 id="Zuul路由熔断"><a href="#Zuul路由熔断" class="headerlink" title="Zuul路由熔断"></a>Zuul路由熔断</h3><ol>
@@ -741,7 +741,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/" title="Spring Cloud Zuul网关">http://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/</a>
+    <a href="https://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/" title="Spring Cloud Zuul网关">https://www.xushuai.fun/2018/12/05/Spring-Cloud-Zuul网关/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -1488,6 +1488,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>;
 <script>
-$("body").backstretch("http://images.xushuai.fun/background.jpg");
+$("body").backstretch("https://images.xushuai.fun/background.jpg");
 </script>
 <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

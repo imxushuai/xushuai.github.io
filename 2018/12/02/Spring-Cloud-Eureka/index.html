@@ -100,12 +100,12 @@
 <meta name="keywords" content="Spring Cloud,Eureka">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Cloud Eureka">
-<meta property="og:url" content="http://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/index.html">
+<meta property="og:url" content="https://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/index.html">
 <meta property="og:site_name" content="B - Blog">
 <meta property="og:description" content="Spring Cloud服务注册与发现组件：Eureka">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006ifTg0gy1fxspi88u31j32a40nygmk.jpg">
-<meta property="og:updated_time" content="2018-12-05T15:41:41.196Z">
+<meta property="og:updated_time" content="2019-03-09T11:47:34.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Cloud Eureka">
 <meta name="twitter:description" content="Spring Cloud服务注册与发现组件：Eureka">
@@ -139,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="http://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/">
+  <link rel="canonical" href="https://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/">
 
 
 
@@ -313,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/">
+    <link itemprop="mainEntityOfPage" href="https://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Baker">
@@ -450,7 +450,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://ws1.sinaimg.cn/large/006ifTg0gy1fxspi88u31j32a40nygmk.jpg" rel="gallery_cjscxtrbw000c5nt2u2evhhtt" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://ws1.sinaimg.cn/large/006ifTg0gy1fxspi88u31j32a40nygmk.jpg" rel="gallery_cjt19v0k8000az5t20e4q06w1" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://ws1.sinaimg.cn/large/006ifTg0gy1fxspi88u31j32a40nygmk.jpg" itemprop="contentUrl">
               </a>
             
@@ -513,11 +513,11 @@
 </ul>
 </blockquote>
 <ol start="2">
-<li>application.yml<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  client:</span></span><br><span class="line"><span class="attr">    fetch-registry:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    register-with-eureka:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    service-url:</span></span><br><span class="line">      <span class="string">defaultZone</span> <span class="string">:</span> <span class="attr">http://localhost:8761/eureka/</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">  port:</span> <span class="number">8761</span></span><br></pre></td></tr></table></figure>
+<li>application.yml<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  client:</span></span><br><span class="line"><span class="attr">    fetch-registry:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    register-with-eureka:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    service-url:</span></span><br><span class="line">      <span class="string">defaultZone</span> <span class="string">:</span> <span class="attr">https://localhost:8761/eureka/</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">  port:</span> <span class="number">8761</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <blockquote>
-<p><code>fetch-registry</code>：是否从Eureka Server上获取注册信息，默认为true，此处建议修改成 false （单机设置的意义不大，如果设置成 true 启动会去抓取一次注册表，获取不到更新缓存就会出错（该错误不影响 eureka 正常使用））<br><code>register-with-eureka</code>：是否将自己注册到Eureka Server，默认为true。默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为。如果不配置此项，启动时会报Cannot execute request on any known server。是因为在启动时，服务是还没有启动好的，但不影响正常启动。启动好后，等发送一次心跳包后，就正常注册了，只不过是自己注册到自己上，意思就是当前服务即是server又是client。<br><code>defaultZone</code>：设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是<a href="http://localhost:8761/eureka" target="_blank" rel="noopener">http://localhost:8761/eureka</a> ；多个地址可使用 , 分隔。 </p>
+<p><code>fetch-registry</code>：是否从Eureka Server上获取注册信息，默认为true，此处建议修改成 false （单机设置的意义不大，如果设置成 true 启动会去抓取一次注册表，获取不到更新缓存就会出错（该错误不影响 eureka 正常使用））<br><code>register-with-eureka</code>：是否将自己注册到Eureka Server，默认为true。默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为。如果不配置此项，启动时会报Cannot execute request on any known server。是因为在启动时，服务是还没有启动好的，但不影响正常启动。启动好后，等发送一次心跳包后，就正常注册了，只不过是自己注册到自己上，意思就是当前服务即是server又是client。<br><code>defaultZone</code>：设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是<a href="https://localhost:8761/eureka" target="_blank" rel="noopener">https://localhost:8761/eureka</a> ；多个地址可使用 , 分隔。 </p>
 </blockquote>
 <p><strong>其他配置项：</strong></p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  instance:</span></span><br><span class="line"><span class="attr">    prefer-ip-address:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 生产环境中官方是不建议修改默认配置，因为那样会破坏 eureka server 的保护模式</span></span><br><span class="line"><span class="attr">  server:</span></span><br><span class="line">    <span class="comment"># 关闭保护模式（生产环境不建议修改，开发环境最好修改为false，默认为true）</span></span><br><span class="line"><span class="attr">    enable-self-preservation:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 清理间隔（默认是60 * 1000 毫秒）（生产环境不建议修改）</span></span><br><span class="line"><span class="attr">    eviction-interval-timer-in-ms:</span> <span class="number">60000</span></span><br><span class="line">    <span class="comment"># Eureka 拉取服务列表时间（默认：30秒）（生产环境不建议修改）</span></span><br><span class="line"><span class="attr">    remote-region-registry-fetch-interval:</span> <span class="number">5</span></span><br><span class="line"><span class="attr">  client:</span></span><br><span class="line">    <span class="comment"># 从 Eureka 服务器端获取注册信息的间隔时间（默认：30秒）</span></span><br><span class="line"><span class="attr">    registry-fetch-interval-seconds:</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
@@ -526,7 +526,7 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xushuai.springclouddemo;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaServer</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringCloudDemoApplication</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(SpringCloudDemoApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol start="4">
-<li>访问<code>http://localhost:8761</code>,查看Eureka的web ui</li>
+<li>访问<code>https://localhost:8761</code>,查看Eureka的web ui</li>
 </ol>
 <p><img src="https://ws1.sinaimg.cn/large/006ifTg0gy1fxsqpjdyvuj31ds0okjtc.jpg" alt=""></p>
 <h3 id="编写Eureka-Client"><a href="#编写Eureka-Client" class="headerlink" title="编写Eureka Client"></a>编写Eureka Client</h3><ol>
@@ -537,7 +537,7 @@
 <p>主要依赖为：eureka-client<br>注意：这里记得依赖上 spring-boot-starter-web，这样启动的时候，该项目才会处于运行状态（运行在tomcat容器中），否则你运行后，什么都没干就关掉了。</p>
 </blockquote>
 <ol start="2">
-<li>application.yml<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  application:</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">eureka-client-1</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  client:</span></span><br><span class="line"><span class="attr">    service-url:</span></span><br><span class="line"><span class="attr">      defaultZone:</span> <span class="attr">http://localhost:8761/eureka</span></span><br><span class="line"><span class="comment">#  instance:</span></span><br><span class="line"><span class="comment">#    hostname: ipOrHostname</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">  port:</span> <span class="number">8001</span></span><br></pre></td></tr></table></figure>
+<li>application.yml<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  application:</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">eureka-client-1</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  client:</span></span><br><span class="line"><span class="attr">    service-url:</span></span><br><span class="line"><span class="attr">      defaultZone:</span> <span class="attr">https://localhost:8761/eureka</span></span><br><span class="line"><span class="comment">#  instance:</span></span><br><span class="line"><span class="comment">#    hostname: ipOrHostname</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">  port:</span> <span class="number">8001</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <blockquote>
@@ -647,7 +647,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/" title="Spring Cloud Eureka">http://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/</a>
+    <a href="https://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/" title="Spring Cloud Eureka">https://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -1394,6 +1394,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>;
 <script>
-$("body").backstretch("http://images.xushuai.fun/background.jpg");
+$("body").backstretch("https://images.xushuai.fun/background.jpg");
 </script>
 <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
