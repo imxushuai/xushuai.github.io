@@ -62,6 +62,32 @@
 
 
 
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
@@ -85,7 +111,7 @@
 
 
 
-  <meta name="keywords" content="FastDFS,乐优商城,">
+  <meta name="keywords" content="乐优商城,FastDFS,">
 
 
 
@@ -97,19 +123,19 @@
 
 
 <meta name="description" content="分类模块与品牌模块实现">
-<meta name="keywords" content="FastDFS,乐优商城">
+<meta name="keywords" content="乐优商城,FastDFS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="乐优商城笔记二：分类与品牌模块">
 <meta property="og:url" content="https://www.xushuai.fun/2018/12/25/乐友商城笔记二：分类与品牌模块/index.html">
 <meta property="og:site_name" content="B - Blog">
 <meta property="og:description" content="分类模块与品牌模块实现">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://images.xushuai.fun/18-12-17/46731258.jpg">
-<meta property="og:updated_time" content="2019-01-17T09:30:45.651Z">
+<meta property="og:image" content="https://images.xushuai.fun/18-12-17/46731258.jpg">
+<meta property="og:updated_time" content="2019-03-09T15:04:35.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="乐优商城笔记二：分类与品牌模块">
 <meta name="twitter:description" content="分类模块与品牌模块实现">
-<meta name="twitter:image" content="http://images.xushuai.fun/18-12-17/46731258.jpg">
+<meta name="twitter:image" content="https://images.xushuai.fun/18-12-17/46731258.jpg">
 
 
 
@@ -439,8 +465,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://images.xushuai.fun/18-12-17/46731258.jpg" rel="gallery_cjt19v0ty002fz5t2gke11bad" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://images.xushuai.fun/18-12-17/46731258.jpg" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="https://images.xushuai.fun/18-12-17/46731258.jpg" rel="gallery_cjq3wwqvi000chwt2l5m0shdt" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://images.xushuai.fun/18-12-17/46731258.jpg" itemprop="contentUrl">
               </a>
             
           
@@ -515,13 +541,13 @@
 <p>默认情况下，请求通过<code>Zuul</code>网关，<code>Spring MVC</code>会对请求做预处理和缓存，但是文件一旦缓存，会给服务器造成不必要的负担。所以我们需要上传文件的请求不进行缓存。官方给出的解决方案就是在请求的最前面加上<code>/zuul</code>这样就可以绕开请求的缓存，直接将请求路由到指定的微服务。</p>
 </blockquote>
 <h4 id="配置nginx路径重写"><a href="#配置nginx路径重写" class="headerlink" title="配置nginx路径重写"></a>配置nginx路径重写</h4><p>修改<code>nginx.conf</code>配置文件</p>
-<p><img src="http://images.xushuai.fun/18-12-22/22658616.jpg" alt=""></p>
+<p><img src="https://images.xushuai.fun/18-12-22/22658616.jpg" alt=""></p>
 <h3 id="分布式文件系统FastDFS"><a href="#分布式文件系统FastDFS" class="headerlink" title="分布式文件系统FastDFS"></a>分布式文件系统FastDFS</h3><h4 id="FastDFS简介"><a href="#FastDFS简介" class="headerlink" title="FastDFS简介"></a>FastDFS简介</h4><p>参考：<a href="http://www.xushuai.fun/2018/12/22/FastDFS%E7%AE%80%E4%BB%8B/">http://www.xushuai.fun/2018/12/22/FastDFS简介/</a></p>
 <h4 id="FastDFS安装"><a href="#FastDFS安装" class="headerlink" title="FastDFS安装"></a>FastDFS安装</h4><p>参考：<a href="http://www.xushuai.fun/2018/12/22/FastDFS%E5%AE%89%E8%A3%85/">http://www.xushuai.fun/2018/12/22/FastDFS安装/</a></p>
 <h4 id="引入FastDFS-client依赖"><a href="#引入FastDFS-client依赖" class="headerlink" title="引入FastDFS-client依赖"></a>引入FastDFS-client依赖</h4><ol>
 <li>java-客户端</li>
 </ol>
-<p><img src="http://images.xushuai.fun/18-12-24/42536809.jpg" alt=""></p>
+<p><img src="https://images.xushuai.fun/18-12-24/42536809.jpg" alt=""></p>
 <ol start="2">
 <li><p>编辑<code>pom.xml</code>文件，新增依赖</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.tobato<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastdfs-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -605,9 +631,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/FastDFS/" rel="tag"><i class="fa fa-tag"></i> FastDFS</a>
-          
             <a href="/tags/乐优商城/" rel="tag"><i class="fa fa-tag"></i> 乐优商城</a>
+          
+            <a href="/tags/FastDFS/" rel="tag"><i class="fa fa-tag"></i> FastDFS</a>
           
         </div>
       
@@ -727,7 +753,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
