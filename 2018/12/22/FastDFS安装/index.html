@@ -130,12 +130,12 @@
 <meta property="og:site_name" content="imxushuai">
 <meta property="og:description" content="centos7下安装FastDFS">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://images.xushuai.fun/18-12-22/39289704.jpg">
-<meta property="og:updated_time" content="2019-03-25T03:25:39.131Z">
+<meta property="og:image" content="https://images.xushuai.fun/fastdfs.jpg">
+<meta property="og:updated_time" content="2019-04-01T08:23:35.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FastDFS安装">
 <meta name="twitter:description" content="centos7下安装FastDFS">
-<meta name="twitter:image" content="https://images.xushuai.fun/18-12-22/39289704.jpg">
+<meta name="twitter:image" content="https://images.xushuai.fun/fastdfs.jpg">
 
 
 
@@ -145,7 +145,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -465,8 +465,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://images.xushuai.fun/18-12-22/39289704.jpg" rel="gallery_cjpzcsztm0007hwt205dzpbta" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://images.xushuai.fun/18-12-22/39289704.jpg" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="https://images.xushuai.fun/fastdfs.jpg" rel="gallery_cjue0cyze0006g4t24580s2cq" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://images.xushuai.fun/fastdfs.jpg" itemprop="contentUrl">
               </a>
             
           
@@ -758,11 +758,6 @@
           
 
   
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTMxOS8xNzg2Ng=="></div>
-    </div>
-
-  
 
 
 
@@ -812,7 +807,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -823,7 +818,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -834,7 +829,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -848,7 +843,7 @@
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
-                    <a href="https://github.com/xs1031893936" target="_blank" title="GitHub">
+                    <a href="https://github.com/imxushuai" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
@@ -857,6 +852,12 @@
                     <a href="https://blog.csdn.net/qq1031893936" target="_blank" title="CSDN">
                       
                         <i class="fa fa-fw fa-copyright"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:imxushuai@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
                 
             </div>
@@ -928,7 +929,7 @@
   </span>
   <span class="post-meta-divider">|</span>
   <i class="fa fa-chart-area"></i>
-  <span class="post-count">博客全站共23.3k字</span>
+  <span class="post-count">博客全站共51.1k字</span>
 </div>
 
 
@@ -960,6 +961,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -1073,17 +1076,6 @@
 
 
 
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
   
 
 
@@ -1436,8 +1428,26 @@
   
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 <script>
 $("body").backstretch("https://images.xushuai.fun/background.jpg");
 </script>
+
+<!-- 心知天气插件
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WM6N2PM3WY2K",
+    "geolocation": "enabled",
+    "position": "bottom-right",
+    "margin": "17px 70px",
+    "language": "auto",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UEB839A1CD",
+    "hash": "28ca33b0751401a8e994a76ed0e253cd"
+});
+tpwidget("show");</script>
+-->
+
 <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

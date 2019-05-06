@@ -1,3 +1,11 @@
+https://www.xushuai.fun/2019/04/08/乐优商城笔记六：商品详情页/
+https://www.xushuai.fun/2019/03/31/Thymeleaf使用详解/
+https://www.xushuai.fun/2019/03/29/hexo添加天气插件/
+https://www.xushuai.fun/2019/03/29/乐优商城笔记五：搜索模块/
+https://www.xushuai.fun/2019/03/29/Elasticsearch的使用/
+https://www.xushuai.fun/2019/03/29/Elasticsearch的介绍和安装/
+https://www.xushuai.fun/2019/03/29/乐优商城笔记四：前台页面搭建/
+https://www.xushuai.fun/2019/03/29/使用SpringMVC开发Restful-API/
 https://www.xushuai.fun/2019/02/19/乐优商城笔记三：规格与商品模块/
 https://www.xushuai.fun/2018/12/25/乐友商城笔记二：分类与品牌模块/
 https://www.xushuai.fun/2018/12/22/FastDFS安装/
@@ -10,6 +18,3 @@ https://www.xushuai.fun/2018/12/03/Spring-Cloud服务调用与负载均衡组件
 https://www.xushuai.fun/2018/12/02/Spring-Cloud-Eureka/
 https://www.xushuai.fun/2018/12/02/Spring-Cloud简述/
 https://www.xushuai.fun/2018/11/28/Spring-Boot自动配置原理/
-https://www.xushuai.fun/2018/11/27/配置Nginx反向代理/
-https://www.xushuai.fun/2018/11/27/Ngxin安装/
-https://www.xushuai.fun/2018/11/25/使用hexo搭建个人博客/
